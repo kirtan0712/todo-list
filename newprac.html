@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>React Counter</title>
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<style>
+  body {
+    background-color: rgb(134, 232, 214);
+  }
+  #mydiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+  }
+  .cent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  button {
+    font-size: xx-large;
+    border-radius: 30px;
+    height: 50px;
+    width: 100px;
+    background-color: bisque;
+    border: 1px solid black;
+    cursor: grab;
+  }
+  button:hover {
+    background-color: skyblue;
+  }
+</style>
+<body>
+  <div id="mydiv"></div>
+  <script type="text/babel">
+    const { useState } = React;
+    function Hello() {
+      const [b, SetB] = useState(12);
+      return <div className="cent">
+        <h1>Counter</h1>
+        <h1>{b}</h1>
+        <button onClick={() => { SetB(b + 1) }}>+</button><br/>
+        <button onClick={() => { SetB(b - 1) }}>-</button>
+      </div>
+    }
+    const cont = document.getElementById('mydiv');
+    const root = ReactDOM.createRoot(cont);
+    root.render(<Hello />)
+  </script>
+</body>
+</html>
