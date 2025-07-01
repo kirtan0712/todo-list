@@ -15,6 +15,7 @@ function App() {
   return (
     <>
       <div className="main">
+      
         <h1>Todo List</h1>
         <div className="input-wrapper">
           <input
@@ -34,6 +35,7 @@ function App() {
           ))}
         </div>
       </div>
+      
     </>
   );
 }
