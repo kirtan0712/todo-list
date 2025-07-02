@@ -51,19 +51,18 @@
 /* Each task item */
 .task-item {
   background-color: #f0f0f0;
-  padding: 10px 10px 10px 15px;
+  padding: 10px 15px;
   border-radius: 6px;
-display: flex;
+  display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
 }
 
 /* Delete button next to task */
-.delete-btn {
+.delete-btn, .edit-btn {
 
   background-color: white;
-  color: white;
   border: none;
   padding: 5px 10px;
   border-radius: 5px;
@@ -71,6 +70,13 @@ display: flex;
   cursor: pointer;
 }
 
+.btn-grp
+{
+  display: flex;
+  gap: 20px;
+}
+
 button:hover {
   background-color: rgba(133, 163, 166, 0.838);
 }
+
